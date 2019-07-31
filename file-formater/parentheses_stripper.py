@@ -9,8 +9,8 @@ print('Removing parentheses and space from filename.....')
 
 files = os.listdir('.')
 
-for f in files:
-	newname = re.sub('[ \(\)]', '', f)
-	os.rename(f, newname)
+for oldname in files:
+	newname = re.sub('[ \(\)]', '', oldname)
+	os.rename(oldname, newname)
 
 print('Completed!')
