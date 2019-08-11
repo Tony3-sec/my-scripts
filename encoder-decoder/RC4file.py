@@ -38,7 +38,7 @@ def encryptor(input_file, key):
 parser = argparse.ArgumentParser(description="RC4 encrypt / decrypt the file")
 parser.add_argument('-e', '--encrypt', action='store_true')
 parser.add_argument('-d', '--decrypt', action='store_true')
-parser.add_argument("-i", "--input_file", action="store", help="RC4 key", required=True)
+parser.add_argument("-i", "--input_file", action="store", help="filename", required=True)
 parser.add_argument("-k", "--key", action="store", help="RC4 key", required=True)
 args = parser.parse_args()
 
