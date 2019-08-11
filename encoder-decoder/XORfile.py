@@ -17,21 +17,19 @@ def XORfile(input_file, key):
 
 	file_size = len(file_contents)
 	XORed_bytearray = bytearray(file_size)
+	j = 0
+
+	if (key_length > 1):
+		for i in range(0, file_size):
+			if (j >= key_length): ## if the key gets to end, set the key back to beginning.
+				j = 0
+			XORed_bytearray[i] = file_contents[i] ^ key[j]
+			j += 1
+	else:
+		for i in range(0, file_size):
+			XORed_bytearray[i] = file_contents[i] ^ key[j]
 
 	with open(output_file, 'wb') as fout:
-		
-		j = 0
-
-		if (key_length > 1):
-			for i in range(0, file_size):
-				if (j >= key_length): ## if the key gets to end, set the key back to beginning.
-					j = 0
-				XORed_bytearray[i] = file_contents[i] ^ key[j]
-				j += 1
-		else:
-			for i in range(0, file_size):
-				XORed_bytearray[i] = file_contents[i] ^ key[j]
-
 		fout.write(XORed_bytearray)
 
 	print('check out ' + str(output_file))
