@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
 import sys
-import binascii
 
-## Convert IP address to hexadecimal
+'''
+Convert IP address to hexadecimal
+'''
 
 if len(sys.argv) < 2:
 	print('Please type IP address')
