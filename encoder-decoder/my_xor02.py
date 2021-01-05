@@ -14,14 +14,12 @@ key = "894568"
 dec = ""
 
 n = 2
-
+m = 0
 ## if key is single byte
 if ( (len(key) / 2) == 1):
-	m = 0
 	for i in range(0, len(enc), n):
 		dec += hex(int(enc[i:i+n], 16) ^ int(key[m:m+n], 16)).replace('0x', '').zfill(2)
 else:
-	m = 0
 	for i in range(0, len(enc), n):
 		dec += hex(int(enc[i:i+n], 16) ^ int(key[m:m+n], 16)).replace('0x', '').zfill(2)
 		m += n
