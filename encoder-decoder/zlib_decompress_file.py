@@ -33,7 +33,7 @@ def raw_inflate_file(file_data):
 
 parser = argparse.ArgumentParser(description="Decompress zlib compressed file")
 parser.add_argument("-f", "--file", action="store", help="File to decompress", dest="FILE")
-parser.add_argument("-z", "--zlib", action="store_true", help="use this option for zlibe decompress", dest="ZLIB_DECOMP")
+parser.add_argument("-z", "--zlib", action="store_true", help="use this option for zlib decompress", dest="ZLIB_DECOMP")
 parser.add_argument("-r", "--raw", action="store_true", help="use this option for raw inflate", dest="RAW_INFLATE")
 args = parser.parse_args()
 
