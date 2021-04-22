@@ -3,12 +3,11 @@
 import binascii
 
 data = "f02a1dfb6521d96509ed211aec361ba92c1bb36559b07746b87350a77458a77448e12a1bfd2b09e42048e03648de0c26a40d27ce0037ef30"
+key = "894568"
+
 data = bytearray(binascii.unhexlify(data))
 data_length = len(data)
-
 XORed_bytearray = bytearray(data_length)
-
-key = "894568"
 key = bytearray(binascii.unhexlify(key))
 key_length = len(key)
 
