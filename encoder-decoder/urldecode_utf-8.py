@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
 import urllib
+import sys
 import argparse
 import os
+import urllib.parse
 
 '''
 This script may (not) decode URL encodings with Unicode chars.
@@ -10,7 +12,7 @@ Ensure to set your editor / terminal's char encoding setting to UTF-8
 in order to get proper output
 '''
 def decode_string(string_data):
-	print(urllib.unquote(string_data))
+	print(urllib.parse.unquote(string_data))
 
 def decode_file(file_data):
 	path = os.getcwd()
@@ -24,8 +26,8 @@ def decode_file(file_data):
 			f.close()
 			d.close()
 			break
-		print(urllib.unquote(line))
-		d.write(urllib.unquote(line))	
+		print(urllib.parse.unquote(line))
+		d.write(urllib.parse.unquote(line))	
 
 
 parser = argparse.ArgumentParser(description="Decode URL encoded data")
