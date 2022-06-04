@@ -2,5 +2,9 @@ If you met with Crypto.Cipher import error, try to re-install pycrypto
 
 
 pip uninstall pycrypto
+pip3 uninstall pycrypto
+
+pip install pycrypto
+pip3 install pycrypto
 
 (sudo) easy_install pycrypto
