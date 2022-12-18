@@ -8,8 +8,6 @@ if [ $# -ne 1 ]; then
 	exit 1
 fi
 
-dirpath=$1
-
 # Search for files that were last accessed more than a year ago, excluding hidden files.
-
+dirpath=$1
 find $dirpath -type f -name "[^/\.]*" -atime +364 -print0 | xargs -0 stat -f "%Sa %N" -t "%Y-%m-%d %H:%M:%S" | sort
